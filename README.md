@@ -1,1 +1,1 @@
-# IntelligentDataPlatform
+# Intelligent Data Platform
