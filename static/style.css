@@ -1,0 +1,86 @@
+.supertitle {
+    color:rgb(67, 111, 207);
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 0px;
+    font-family:'Raleway', sans-serif;
+    font-size: 80px;
+}
+
+.slogan {
+    color:rgb(1, 7, 15);
+    text-align: center;
+    font-family:'Raleway', sans-serif;
+    font-size: 40px;
+}
+
+.set_range {
+    color:rgb(67, 111, 207);
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.rule_name {
+    
+    color:rgb(67, 111, 207);
+    font-family:'Raleway', sans-serif;
+    font-size: 30px; 
+    text-align: left; 
+    margin-left: 15px; 
+    margin-top: 20px;
+}
+
+
+
+.subtitle {
+    color: rgb(67, 111, 207);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family:'Raleway', sans-serif;
+    font-size: 50px;
+}
+
+.subtitle2 {
+    color: rgb(67, 111, 207);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family:'Raleway', sans-serif;
+    font-size: 40px;
+}
+
+
+.dataframe {
+    text-align: center;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 410px;
+
+}
+
+.dataframe thead th{
+    background: rgb(129, 155, 212);
+    text-align: center;
+}
+
+.dataframe th{
+    background: rgb(129, 155, 212);
+}
+
+
+.list-group-numbered {
+    list-style: decimal inside !important
+}
+
+.list-group-item {
+    display: list-item !important
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
