@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+Correct with consistency
+{% endblock %}
+
+{% block content %}
+
+<h3 class="rule_name">CONS1 | When field has certain value, then another field has another value</h3>
+<ol class="list-group list-group-numbered">
+    {% for result in res1 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ol>
+
+
+<form action="" method = "POST">
+    <h2 class="subtitle2" style="margin-top: 150px;">Choose the rule you want to apply.</h2>
+    <input class="form-control form-control-lg" type="text" placeholder="rule number." aria-label=".form-control-lg example" name = "rule_number">
+    <button style="margin:10px;" type="submit" class="btn btn-outline-primary">Set rule.</button>
+    <p style="margin-left: 15px;" class="set_range">
+        {{message}}
+    </p>
+</form>
+
+<form action="consistency_results" method="post">
+    <button style="margin:10px;" type="submit" class="btn btn-outline-primary">Check results.</button>
+</form>
+
+
+
+{% endblock %}

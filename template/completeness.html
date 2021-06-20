@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Completeness
+{% endblock %}
+
+{% block content %}
+
+<h3 class="rule_name">COMP1 | Field is populated</h3>
+
+<ul class="list-group list-group-flush">
+    {% for result in res1 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
+
+<h3 class="rule_name">COMP2 | When field has a certain value, then another field is populated</h3>
+<ul class="list-group list-group-flush">
+    {% for result in res2 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+<h3 class="rule_name">COMP3 | When one field is populated, then another field is populated</h3>
+<ul class="list-group list-group-flush">
+    {% for result in res3 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
+<form action="analyze" method="post">
+    <button style="margin-top:25px; margin-left: 20px;" type="submit" class="btn btn-outline-primary">Choose another dimension.</button>
+</form>
+
+<form action="correct" method="post">
+    <button style="margin-top: 10px; margin-bottom: 10px; margin-left: 20px;" type="submit" class="btn btn-outline-primary">Go correct data now.</button>
+</form>
+
+<form action="home" method="post">
+    <button style="margin-left: 20px; margin-bottom: 10px;" type="submit" class="btn btn-outline-primary">Go to beggining.</button>
+</form> 
+{% endblock %}

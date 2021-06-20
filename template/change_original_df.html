@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Apply changes
+{% endblock %}
+
+{% block content %}
+
+<h2 class="subtitle2">Changes applied sucessfully!</h2>
+
+<h3 class="subtitle2">Take a last look at your dataframe.</h3>
+<center>
+    {{ altered_dataframe.to_html(classes="table table-responsive") | safe}}
+</center>
+
+<h3 class="rule_name">Where do we go next?</h3>
+<form action="analyze">
+    <button style="margin-top:10px; margin-left: 20px;" type="submit" name="change" value="change" class="btn btn-outline-primary">Go analyze again.</button>
+</form>
+
+<form action="correct">
+    <button style="margin-top: 10px; margin-bottom: 10px; margin-left: 20px;" type="submit" name="change" value="change" class="btn btn-outline-primary">Go apply more changes.</button>
+</form>
+
+<form action="download">
+    <button style="margin-left: 20px; margin-bottom: 10px;" type="submit" name="change" value="change" class="btn  btn-outline-primary">Download file.</button>
+</form>
+
+
+
+{% endblock %}

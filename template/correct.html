@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+Correct
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="rule_name">Choose a dimension and values for minimum and maximum confidence.</h1>
+    
+    <form action="" method = "POST">
+        <input class="form-control form-control-lg" type="text" placeholder="Minimum confidence" aria-label=".form-control-lg example" name = "min">
+        <input class="form-control form-control-lg" type="text" placeholder="Maximum confidence" aria-label=".form-control-lg example" name = "max">
+        <button style="margin:10px;" type="submit" class="btn btn-outline-primary">Save range.</button>
+        <p style="margin-left: 10px;" class="set_range">
+            {{message}}
+        </p>
+    </form>
+
+    <center>
+    <form action="fix_with_completeness" method="post">
+        <button style="margin:10px;" type="submit" class="btn btn-outline-primary">Completeness</button>
+    </form>
+
+    <form action="fix_with_consistency" method="post">
+        <button  style="margin:10px;" type="submit" class="btn btn-outline-primary">Consistency</button>
+    </form>
+
+
+        
+    </center>
+
+    <form action="download">
+        <button style="margin-bottom: 30px; margin-left: 10px;" type="submit" name="change" value="change" class="btn btn-outline-primary">Download file.</button>
+    </form>
+
+
+{% endblock %}
+

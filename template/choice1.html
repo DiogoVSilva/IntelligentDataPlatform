@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Choice
+{% endblock %}
+
+{% block content %}
+
+    <h1 style="font-size: 40px;" class="subtitle">Here is your dataset. What do you wish to do?</h1>
+
+
+    <center>
+        {{ data.to_html(classes="table table-responsive") | safe}}
+    </center>
+
+    <center>
+        <form action="analyze">
+        
+            <button  style="margin:10px;" type="submit" name="choice" value="Analyze" class="btn btn-primary btn-lg" margin_bottom=20px>Analyze your data.</button>
+            
+        </form>
+    
+        <form action="correct">
+
+            <button style="margin-bottom: 10px;" type="submit" name="choice" value="Correct" class="btn btn-secondary btn-lg">Correct your data.</button>
+            
+        </form>
+
+    </center>
+    
+  
+
+    
+    
+
+{% endblock %}

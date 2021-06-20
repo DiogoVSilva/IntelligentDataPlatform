@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+Conformity
+{% endblock %}
+
+{% block content %}
+
+<h3 class="rule_name">CONF1 | Field has a certain pattern</h3>
+
+<ul class="list-group list-group-flush">
+    {% for result in res1 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
+
+<h3 class="rule_name">CONF2 | When one field has a certain value, then another field has a certain pattern</h3>
+<ul class="list-group list-group-flush">
+    {% for result in res2 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+<h3 class="rule_name">CONF3 | Field length ranges between two measures</h3>
+<ul class="list-group list-group-flush">
+    {% for result in res3 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+<h3 class="rule_name">CONF4 | Field value ranges between two other values</h3>
+<ul class="list-group list-group-flush">
+    {% for result in res4 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+<h3 class="rule_name">CONF5 | Field contains a certain datatype</h3>
+<ul class="list-group list-group-flush">
+    {% for result in res5 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
+<form action="analyze" method="post">
+    <button style="margin-top:25px; margin-left: 20px;" type="submit" class="btn btn-outline-primary">Choose another dimension.</button>
+</form>
+
+<form action="correct" method="post">
+    <button style="margin-top: 10px; margin-bottom: 10px; margin-left: 20px;" type="submit" class="btn btn-outline-primary">Go correct data now.</button>
+</form>
+
+<form action="home" method="post">
+    <button style="margin-left: 20px; margin-bottom: 10px;" type="submit" class="btn btn-outline-primary">Go to beggining.</button>
+</form> 
+{% endblock %}

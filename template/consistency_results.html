@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+Consistency results
+{% endblock %}
+
+{% block content %}
+
+<h2 class="rule_name">Rule aplied: {{rule}}</h2>
+
+<h3 style="font-size: 30px;  margin-top: 20px;" class="subtitle2">Altered rows</h3>
+<center>
+    {{ altered_rows.to_html(classes="table table-responsive") | safe}}
+</center>
+
+
+<h3 style="font-size: 30px;" class="subtitle2">Altered dataframe</h3>
+<center>
+    {{ altered_dataframe.to_html(classes="table table-responsive") | safe}}
+</center>
+
+<form action="change_original_df">
+    <button style="margin-top:25px; margin-left: 20px;" type="submit" name="change" value="change" class="btn btn-outline-primary">Save changes.</button> 
+</form>
+
+<form action="analyze">
+    <button style="margin-top: 10px; margin-bottom: 10px; margin-left: 20px;" type="submit" name="change" value="change" class="btn btn-outline-primary">I'm not happy. I want to analyze again.</button> 
+</form>
+
+<form action="correct">
+    <button style="margin-left: 20px; margin-bottom: 10px;" type="submit" name="change" value="change" class="btn btn-outline-primary">I'm not happy. I want to use another rule.</button> 
+</form>
+
+{% endblock %}

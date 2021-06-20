@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+Integrity
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="rule_name">INTE1 | Field has certain value(s)</h3>
+
+<ul class="list-group list-group-flush">
+    {% for result in res1 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
+
+<h3 class="rule_name">INTE2 | Field compares to another Field</h3>
+<ul class="list-group list-group-flush">
+    {% for result in res2 %}
+    <li class="list-group-item">{{ result }}</li>
+    {% endfor %}
+</ul>
+
+
+<form action="analyze" method="post">
+    <button style="margin-top:25px; margin-left: 20px;" type="submit" class="btn btn-outline-primary">Choose another dimension.</button>
+</form>
+
+<form action="correct" method="post">
+    <button style="margin-top: 10px; margin-bottom: 10px; margin-left: 20px;" type="submit" class="btn btn-outline-primary">Go correct data now.</button>
+</form>
+
+<form action="home" method="post">
+    <button style="margin-left: 20px; margin-bottom: 10px;" type="submit" class="btn btn-outline-primary">Go to beggining.</button>
+</form> 
+
+
+
+{% endblock %}

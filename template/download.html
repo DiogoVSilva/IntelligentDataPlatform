@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Download
+{% endblock %}
+
+{% block content %}
+
+<h2 class="subtitle2">Save as:</h2>
+
+<form action="" method = "POST">
+    <input class="form-control form-control-lg" type="text" placeholder="File name" aria-label=".form-control-lg example" name = "file_name">
+    <button style="margin:10px;" type="submit" class="btn btn-outline-primary">Save file.</button>
+</form>
+
+<form action="/" method = "POST">
+    <button style="margin:10px;" type="submit" class="btn btn-outline-primary">Back to beggining.</button>
+</form>
+
+
+
+{% endblock %}

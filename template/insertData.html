@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Insert Data
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="subtitle">First insert your csv file, please.</h1>
+
+    <center>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" value="Choose file" />
+            <input type="submit" value="Submit" />
+        </form>
+
+        <p>
+            {{message}}
+        </p>
+
+    </center>
+
+    <form action="choice1">
+        <center>
+            <button type="submit" class="btn btn-outline-primary">Continue</button>
+        </center>
+        
+    </form>
+        
+    
+{% endblock %}
